@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,450 +13,519 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #0f172a;
-            --text: #334155;
-            --text-light: #64748b;
-            --bg: #ffffff;
-            --bg-light: #f8fafc;
-            --border: #e2e8f0;
-        }
+```
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #0f172a;
+        --text: #334155;
+        --text-light: #64748b;
+        --bg: #ffffff;
+        --bg-light: #f8fafc;
+        --border: #e2e8f0;
+        --green: #10b981;
+        --red: #ef4444;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-        /* Navigation */
-        nav {
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    /* Navigation */
+    nav {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--secondary);
-            text-decoration: none;
-        }
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--secondary);
+        text-decoration: none;
+    }
 
-        .logo span {
-            color: var(--primary);
-        }
+    .logo span {
+        color: var(--primary);
+    }
 
-        .nav-cta {
-            background: var(--primary);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
+    .nav-cta {
+        background: var(--primary);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+    }
 
-        .nav-cta:hover {
-            background: var(--primary-dark);
-        }
+    .nav-cta:hover {
+        background: var(--primary-dark);
+    }
 
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 100px;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
-        }
+    /* Hero Section */
+    .hero {
+        padding: 80px 0 100px;
+        text-align: center;
+        background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+    }
 
+    .hero h1 {
+        font-size: 56px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 24px;
+        line-height: 1.1;
+    }
+
+    .hero h1 span {
+        color: var(--primary);
+    }
+
+    .hero p {
+        font-size: 20px;
+        color: var(--text-light);
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 16px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+
+    .cta-button:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Problem Section */
+    .problem {
+        padding: 80px 0;
+        background: var(--bg);
+    }
+
+    .section-title {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--secondary);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        color: var(--text-light);
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .problem-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .problem-card {
+        padding: 30px;
+        background: var(--bg-light);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+    }
+
+    .problem-card h3 {
+        font-size: 20px;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .problem-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+    }
+
+    /* Solution Section */
+    .solution {
+        padding: 80px 0;
+        background: var(--bg-light);
+    }
+
+    .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .solution-card {
+        text-align: center;
+        padding: 40px 30px;
+        background: var(--bg);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .solution-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 28px;
+    }
+
+    .solution-card h3 {
+        font-size: 22px;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .solution-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+    }
+
+    /* How It Works */
+    .how-it-works {
+        padding: 80px 0;
+        background: var(--bg);
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 50px;
+        margin-top: 60px;
+    }
+
+    .step {
+        text-align: center;
+        position: relative;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 auto 24px;
+    }
+
+    .step h3 {
+        font-size: 22px;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .step p {
+        color: var(--text-light);
+        line-height: 1.7;
+    }
+
+    /* What to Expect Section */
+    .expectations {
+        padding: 80px 0;
+        background: var(--bg-light);
+    }
+
+    .expectations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .expect-box {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+    }
+
+    .expect-do {
+        border: 2px solid var(--green);
+    }
+
+    .expect-dont {
+        border: 2px solid var(--red);
+    }
+
+    .expect-box h3 {
+        font-size: 24px;
+        color: var(--secondary);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .expect-box h3 span {
+        font-size: 32px;
+        margin-right: 12px;
+    }
+
+    .expect-box ul {
+        list-style: none;
+        padding: 0;
+        color: var(--text);
+        line-height: 2;
+    }
+
+    .expect-box li {
+        margin-bottom: 12px;
+    }
+
+    .expectations-note {
+        background: var(--primary);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        text-align: center;
+        color: white;
+    }
+
+    .cta-section h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    .cta-section p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        opacity: 0.95;
+    }
+
+    /* Form Section */
+    .form-section {
+        padding: 80px 0;
+        background: var(--bg-light);
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--bg);
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+        font-size: 32px;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .form-container p {
+        color: var(--text-light);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--secondary);
+        font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 16px;
+        font-family: inherit;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .submit-button {
+        width: 100%;
+        background: var(--primary);
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .submit-button:hover {
+        background: var(--primary-dark);
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 0 30px;
+        background: var(--secondary);
+        color: white;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-legal {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-legal p {
+        margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
         .hero h1 {
-            font-size: 56px;
-            font-weight: 800;
-            color: var(--secondary);
-            margin-bottom: 24px;
-            line-height: 1.1;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
+            font-size: 36px;
         }
 
         .hero p {
-            font-size: 20px;
-            color: var(--text-light);
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
             font-size: 18px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
-        }
-
-        .cta-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        /* Problem Section */
-        .problem {
-            padding: 80px 0;
-            background: var(--bg);
         }
 
         .section-title {
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--secondary);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--text-light);
-            text-align: center;
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .problem-card {
-            padding: 30px;
-            background: var(--bg-light);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .problem-card h3 {
-            font-size: 20px;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .problem-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Solution Section */
-        .solution {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .solution-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: var(--bg);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .solution-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .solution-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 28px;
-        }
-
-        .solution-card h3 {
-            font-size: 22px;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .solution-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0;
-            background: var(--bg);
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 50px;
-            margin-top: 60px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0 auto 24px;
-        }
-
-        .step h3 {
-            font-size: 22px;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .step p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-
-        /* Form Section */
-        .form-section {
-            padding: 80px 0;
-            background: var(--bg-light);
+            font-size: 32px;
         }
 
         .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--bg);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
         }
 
-        .form-container h2 {
-            font-size: 32px;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .form-container p {
-            color: var(--text-light);
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-button {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .submit-button:hover {
-            background: var(--primary-dark);
-        }
-
-        /* Footer */
-        footer {
-            padding: 50px 0 30px;
-            background: var(--secondary);
-            color: white;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .steps {
             gap: 40px;
-            margin-bottom: 40px;
         }
+    }
 
-        .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 16px;
-        }
+    /* Success Message */
+    .success-message {
+        display: none;
+        background: #10b981;
+        color: white;
+        padding: 16px;
+        border-radius: 6px;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
-            transition: color 0.3s;
-        }
+    .success-message.show {
+        display: block;
+    }
+</style>
+```
 
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-legal {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .footer-legal p {
-            margin-bottom: 8px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 32px;
-            }
-
-            .form-container {
-                padding: 30px 20px;
-            }
-
-            .steps {
-                gap: 40px;
-            }
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            background: #10b981;
-            color: white;
-            padding: 16px;
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -463,225 +533,265 @@
         <div class="container">
             <div class="nav-content">
                 <a href="#" class="logo">Smart<span>2</span>Leads</a>
-                <a href="#early-access" class="nav-cta">Get Free Sample</a>
+                <a href="#free-sample" class="nav-cta">Get Free Sample</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Get SaaS Companies <span>Hiring for Growth</span> Right Now</h1>
-            <p>The buying signal your sales team needs. We identify companies actively expanding—so you can reach them at the perfect moment.</p>
-            <a href="#early-access" class="cta-button">Get Free Sample</a>
-        </div>
-    </section>
+```
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Get SaaS Companies <span>Hiring for Growth</span> Right Now</h1>
+        <p>The buying signal your sales team needs. We identify companies actively expanding—so you can reach them at the perfect moment.</p>
+        <a href="#free-sample" class="cta-button">Get 3 Free Smart Signals</a>
+    </div>
+</section>
 
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <h2 class="section-title">Finding qualified B2B leads is slow, manual, and expensive</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>❌ Cold lists don't convert</h3>
-                    <p>Generic lead databases give you outdated contacts with zero buying intent. Your conversion rates suffer.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>⏰ Prospecting eats founder time</h3>
-                    <p>You spend hours researching companies when you should be closing deals and growing your business.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>💸 SDRs waste hours on bad leads</h3>
-                    <p>Your sales team burns time and money chasing unqualified prospects that will never buy.</p>
-                </div>
+<!-- Problem Section -->
+<section class="problem">
+    <div class="container">
+        <h2 class="section-title">Finding qualified B2B leads is slow, manual, and expensive</h2>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <h3>❌ Cold lists don't convert</h3>
+                <p>Generic lead databases give you outdated contacts with zero buying intent. Your conversion rates suffer.</p>
+            </div>
+            <div class="problem-card">
+                <h3>⏰ Prospecting eats founder time</h3>
+                <p>You spend hours researching companies when you should be closing deals and growing your business.</p>
+            </div>
+            <div class="problem-card">
+                <h3>💸 SDRs waste hours on bad leads</h3>
+                <p>Your sales team burns time and money chasing unqualified prospects that will never buy.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Solution Section -->
-    <section class="solution">
-        <div class="container">
-            <h2 class="section-title">Smart2Leads does the hard work for you</h2>
-            <p class="section-subtitle">AI-powered lead generation that finds companies ready to buy</p>
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🎯</div>
-                    <h3>AI-Powered Company Discovery</h3>
-                    <p>Our intelligent system monitors growth signals across the web to identify companies in expansion mode.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">✓</div>
-                    <h3>Lead Qualification Based on Real Signals</h3>
-                    <p>We analyze hiring patterns, funding rounds, and market activity to qualify leads before they reach you.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">📧</div>
-                    <h3>Weekly Delivery of Ready-to-Contact Leads</h3>
-                    <p>Get qualified leads with context and personalized outreach suggestions delivered straight to your inbox.</p>
-                    <p style="margin-top: 12px; font-weight: 600; color: var(--primary);">No scraping. No cold lists. Only intent-based signals.</p>
-                </div>
+<!-- Solution Section -->
+<section class="solution">
+    <div class="container">
+        <h2 class="section-title">Smart2Leads does the hard work for you</h2>
+        <p class="section-subtitle">AI-powered lead generation that finds companies ready to buy</p>
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-icon">🎯</div>
+                <h3>AI-Powered Company Discovery</h3>
+                <p>Our intelligent system monitors growth signals across the web to identify companies in expansion mode.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">✓</div>
+                <h3>Lead Qualification Based on Real Signals</h3>
+                <p>We analyze hiring patterns, funding rounds, and market activity to qualify leads before they reach you.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">📧</div>
+                <h3>Weekly Delivery of Ready-to-Contact Leads</h3>
+                <p>Get qualified leads with context and personalized outreach suggestions delivered straight to your inbox.</p>
+                <p style="margin-top: 12px; font-weight: 600; color: var(--primary);">No scraping. No cold lists. Only intent-based signals.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">From setup to qualified leads in three simple steps</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Tell us your ideal customer</h3>
-                    <p>Define your target market, company size, industry, and the signals that matter most to your sales process.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Our AI finds and qualifies companies</h3>
-                    <p>Smart2Leads continuously monitors and analyzes thousands of companies to identify the best matches.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>You receive leads directly in your inbox</h3>
-                    <p>Get weekly batches of qualified leads with full context and personalized outreach suggestions.</p>
-                </div>
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">From setup to qualified leads in three simple steps</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Tell us your ideal customer</h3>
+                <p>Define your target market, company size, industry, and the signals that matter most to your sales process.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Our AI finds and qualifies companies</h3>
+                <p>Smart2Leads continuously monitors and analyzes thousands of companies to identify the best matches.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>You receive leads directly in your inbox</h3>
+                <p>Get weekly batches of qualified leads with full context and personalized outreach suggestions.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Start receiving qualified leads today</h2>
-            <p>Join the waitlist and get a free sample of 5 high-intent leads</p>
-            <a href="#early-access" class="cta-button" style="background: white; color: var(--primary);">Get Free Sample Now</a>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section" id="early-access">
-        <div class="container">
-            <div class="form-container">
-                <h2>Get Your Free Sample</h2>
-                <p>Receive 5 qualified leads to see Smart2Leads in action</p>
-                <form id="earlyAccessForm">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company Name *</label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="companyType">What type of company are you? *</label>
-                        <select id="companyType" name="companyType" required>
-                            <option value="">Select one...</option>
-                            <option value="saas">SaaS Company</option>
-                            <option value="agency">Agency</option>
-                            <option value="consultant">Consultant</option>
-                            <option value="startup">Startup</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="targetMarket">What's your target market?</label>
-                        <textarea id="targetMarket" name="targetMarket" placeholder="e.g., B2B SaaS companies with 10-50 employees in tech industry"></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Get Free Sample</button>
-                    <div class="success-message" id="successMessage">
-                        ✓ Thank you! Check your inbox for your free sample leads.
-                    </div>
-                </form>
+<!-- What to Expect Section -->
+<section class="expectations">
+    <div class="container">
+        <h2 class="section-title">What to Expect</h2>
+        <p class="section-subtitle">Honest expectations. No BS. No magic promises.</p>
+        
+        <div class="expectations-grid">
+            <div class="expect-box expect-do">
+                <h3><span>✅</span> What We Deliver</h3>
+                <ul>
+                    <li>→ 10 qualified smart signals every week</li>
+                    <li>→ Full context: growth signals + timing</li>
+                    <li>→ Ready-to-send personalized pitches</li>
+                    <li>→ Average lead score: 7-9/10</li>
+                    <li>→ Saves 10+ hours/week of research</li>
+                </ul>
+            </div>
+            
+            <div class="expect-box expect-dont">
+                <h3><span>❌</span> What We Don't Promise</h3>
+                <ul>
+                    <li>→ Guaranteed meetings or sales</li>
+                    <li>→ 100% verified emails (we predict patterns)</li>
+                    <li>→ Instant revenue (outreach takes work)</li>
+                    <li>→ Magic bullets or shortcuts</li>
+                </ul>
             </div>
         </div>
-    </section>
+        
+        <div class="expectations-note">
+            <p style="margin-bottom: 10px;"><strong>Our job:</strong> Give you high-quality, context-rich smart signals.</p>
+            <p><strong>Your job:</strong> Reach out and close them.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Smart2Leads</h3>
-                    <p>AI-powered B2B lead generation that helps SaaS companies grow faster.</p>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Start receiving qualified leads today</h2>
+        <p>See the quality first. Get 3 free smart signals. No credit card required.</p>
+        <a href="#free-sample" class="cta-button" style="background: white; color: var(--primary);">Get Your Free Sample Now</a>
+    </div>
+</section>
+
+<!-- Form Section -->
+<section class="form-section" id="free-sample">
+    <div class="container">
+        <div class="form-container">
+            <h2>Get Your First 3 Smart Signals Free</h2>
+            <p>See our quality before you commit. No credit card required.</p>
+            <form id="earlyAccessForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="footer-section">
-                    <h3>Product</h3>
-                    <a href="#early-access">Get Free Sample</a>
-                    <a href="#how-it-works">How It Works</a>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <a href="mailto:hola@smart2leads.com">hola@smart2leads.com</a>
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" required>
                 </div>
+                <div class="form-group">
+                    <label for="companyType">What type of company are you? *</label>
+                    <select id="companyType" name="companyType" required>
+                        <option value="">Select one...</option>
+                        <option value="saas">SaaS Company</option>
+                        <option value="agency">Agency</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="startup">Startup</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="targetMarket">What's your target market?</label>
+                    <textarea id="targetMarket" name="targetMarket" placeholder="e.g., B2B SaaS companies with 10-50 employees in tech industry"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Get 3 Free Smart Signals</button>
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! Check your inbox for your free smart signals within 24 hours.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Smart2Leads</h3>
+                <p>AI-powered B2B lead generation that helps SaaS companies grow faster.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Smart2Leads Team. All rights reserved.</p>
-                <div class="footer-legal">
-                    <p><strong>Data Compliance:</strong> We collect and process business signals from publicly available sources only (job postings, funding announcements, company websites).</p>
-                    <p><strong>Privacy:</strong> We respect your privacy and comply with GDPR and CAN-SPAM regulations. You can unsubscribe at any time.</p>
-                    <p><strong>Contact:</strong> For privacy inquiries or data removal requests, email hola@smart2leads.com</p>
-                </div>
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="#free-sample">Get Free Sample</a>
+                <a href="#how-it-works">How It Works</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:hello@smart2leads.com">hello@smart2leads.com</a>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Smart2Leads Team. All rights reserved.</p>
+            <div class="footer-legal">
+                <p><strong>What We Deliver:</strong> High-quality B2B smart signals with growth context, timing intelligence, and personalized outreach suggestions. Our service saves 10+ hours per week of manual research.</p>
+                <p><strong>What We Don't Promise:</strong> We do not guarantee meetings, sales, or revenue. Email predictions are based on pattern analysis (70-85% accuracy). Success depends on your outreach execution and offer quality.</p>
+                <p><strong>Data Compliance:</strong> We collect and analyze publicly available business signals only (job postings, funding announcements, company websites). We respect privacy and comply with GDPR and CAN-SPAM regulations.</p>
+                <p><strong>Contact:</strong> Questions or concerns? Email hello@smart2leads.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form handling with Make webhook
-        document.getElementById('earlyAccessForm').addEventListener('submit', async function(e) {
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Send to Make webhook
-            try {
-                const response = await fetch('https://hook.us2.make.com/vhjfnemrlihepwhqmn8p28l9s9vherq5', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-                
-                if (response.ok) {
-                    // Show success message
-                    document.getElementById('successMessage').classList.add('show');
-                    
-                    // Reset form
-                    this.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        document.getElementById('successMessage').classList.remove('show');
-                    }, 5000);
-                } else {
-                    alert('Something went wrong. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Connection error. Please try again.');
             }
         });
-    </script>
+    });
+
+    // Form handling with Make webhook
+    document.getElementById('earlyAccessForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Send to Make webhook
+        try {
+            const response = await fetch('https://hook.us2.make.com/vhjfnemrlihepwhqmn8p28l9s9vherq5', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+                // Show success message
+                document.getElementById('successMessage').classList.add('show');
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 5000);
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Connection error. Please try again.');
+        }
+    });
+</script>
+```
+
 </body>
 </html>
